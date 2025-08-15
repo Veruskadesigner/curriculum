@@ -1,0 +1,40 @@
+/* --- Estilos para o Carrossel --- */
+.carrossel-container {
+    position: relative;
+    max-width: 100%; /* Para se adaptar ao card */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 0.5rem; /* Para combinar com o estilo do card */
+}
+
+.carrossel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrossel-slides img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.carrossel-botao {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.carrossel-botao.anterior {
+    left: 10px;
+}
+
+.carrossel-botao.proximo {
+    right: 10px;
+}

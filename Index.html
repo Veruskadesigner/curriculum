@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Pessoal</title>
+ <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+
+    <!-- Inclui a fonte Inter do Google Fonts para a tipografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Tangerine:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Estilos globais e da página */
+        :root {
+            --primary-color: #052a31;
+            /* Cor verde para botões e detalhes */
+            --secondary-color: #55acee;
+            /* Cor azul para a foto de perfil */
+            --bg-color: #f0f2f5;
+            /* Cor de fundo principal */
+            --card-bg-color: #ffffff;
+            /* Cor de fundo dos cards */
+            --text-color: #07011d;
+            --secondary-text-color: #020113;
+            --border-color: #e9ecef;
+            <script>
+    const slides = document.querySelector('.carrossel-slides');
+    const botoes = document.querySelectorAll('.carrossel-botao');
+    const imagens = document.querySelectorAll('.carrossel-slides img');
+    
+    let indiceAtual = 0;
+    const totalImagens = imagens.length;
+
+    function moverCarrossel() {
+        slides.style.transform = `translateX(${-indiceAtual * 100}%)`;
+    }
+
+    botoes.forEach(botao => {
+        botao.addEventListener('click', () => {
+            if (botao.classList.contains('proximo')) {
+                indiceAtual = (indiceAtual + 1) % totalImagens;
+            } else {
+                indiceAtual = (indiceAtual - 1 + totalImagens) % totalImagens;
+            }
+            moverCarrossel();
+        });
+    });
+</script>
+        }
+
+        .texto {
+            /* color: #e9ecef;
+            border-color: rgb(1, 1, 35);
+            padding: 0.10rem 0.7rem;
+            border-radius: 10px; */
+
+                color: #052a31;
+    border-color: rgb(1, 1, 35);
+    padding: 0.10rem 0.7rem;
+    /* border-radius: 10px;*/
+        }
+
+        .tangerine-regular {
+            font-family: "Tangerine", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .tangerine-bold {
+            font-family: "Tangerine", cursive;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        body {
+
+
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Estilos do cabeçalho */
+        .header {
+            background-color: var(--card-bg-color);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto;
+            max-width: 1200px;
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-pic img {
+            width: 150px;
+            /* height: 80px; */
+            background-color: var(--secondary-color);
+            borderbox-shadow: 90%;
+            margin-right: 3.8rem;
+            /* Se for usar uma imagem real, substitua o background-color por: */
+            /* background-image: url('caminho-da-sua-foto.jpg'); */
+            /* background-size: cover; */
+        }
+
+        .profile-text h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .profile-text p {
+            margin: 0.25rem 0 0.5rem;
+            color: var(--secondary-text-color);
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            font-size: 1.25rem;
+            margin-right: 1rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .contact-button {
+            /* background-color: var(--primary-color); */
+            /* color: var(--card-bg-color); */
+            /* color: #ffffff; */
+            /* border-color: rgb(1, 1, 35);
+            padding: 0.75rem 1.5rem; */
+            /* border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            text-transform: uppercase; */
+            /* transition: background-color 0.3s; */
+                 border:#010123 solid 1px;
+        }
+
+        .contact-button:hover {
+            background-color: #218838;
+            color: #fff;
+        }
+        .contact-button p:hover {
+            
+            color: #fff;
+        }
+.contact-button i{ 
+    font-size: 44px;
+}
+       
+
+        /* Estilos dos cards */
+        .card {
+            background-color: var(--card-bg-color);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        /* Estilos dos títulos de seção */
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Estilos da seção de Formação */
+        .courses ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 1rem;
+        }
+
+        .courses li {
+            position: relative;
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            color: var(--secondary-text-color);
+        }
+
+        .courses li::before {
+            content: '\f02d';
+            /* Ícone de livro do Font Awesome */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        .courses h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Estilos da barra lateral */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-info p {
+            margin: 0.5rem 0;
+            color: var(--secondary-text-color);
+        }
+
+        .contact-info i {
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+
+        /* Estilos das barras de habilidade */
+        .skill-item {
+            margin-bottom: 1rem;
+        }
+
+        .skill-item p {
+            margin: 0 0 0.5rem;
+            font-weight: 600;
+        }
+
+        .skill-bar {
+            background-color: var(--border-color);
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .skill-level {
+            background-color: var(--primary-color);
+            height: 100%;
+            border-radius: 5px;
+            transition: width 0.5s ease-in-out;
+        }
+
+        /* Estilos para responsividade em telas menores */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-info {
+                flex-direction: column;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .profile-pic {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+
+            .contact-button {
+                width: 100%;
+                margin-top: 1rem;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="profile-info">
+            <div class="profile-pic">
+                <img src="imagens/Foto perfil.jpg" alt="minha foto" width="90px">
+            </div>
+            <div class="profile-text">
+                <h1 class="tangerine-regular"> Veruska Daniela Rodrigues de Oliveira</h1>
+                <p> Técnica de Informática | Designer Gráfico</p>
+                <div class="social-links">
+                    <a href="https://veruzka.portfoliobox.net/algunstrabalhos" target="_blank">🖱️⇱</i></a>
+
+                    <!-- <a href="#"><i class="fab fa-github"></i></a> -->
+                    <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+                </div>
+            </div>
+        </div>
+        <button class="contact-button">
+            <a href="https://wa.me/5511948457700" target="_blank">
+           
+                <p class="texto"><i class="fab fa-whatsapp-square"></i></p>
+            </a>
+        </button>
+
+    </header>
+
+    <main class="container">
+        <!-- Conteúdo principal -->
+        <section class="main-content">
+            <div class="card about-me">
+                <h2>Objetivo</h2>
+                <p> • Técnica de informática</p>
+                <p> • Suporte N1 chat (Atendimento via Chat, E-mail e Telefone)</p>
+                <p> • Atendente de Help Desk </p>
+
+                <h2 style="margin-top: 2rem;">Sobre</h2>
+                <p> Olá! Meu nome é Veruska; sou uma profissional dedicada e experiente em suporte técnico e TI, com um
+                    foco forte em suporte técnico, hardware e softwares. Com um sólido background em atendimento técnico
+                    presencial e remoto, busco aplicar minhas habilidades para otimizar operações e garantir a
+                    excelência no suporte.</p>
+
+            </div>
+
+            <div class="card courses">
+                <h2>Formação</h2>
+                <h3>Cursos:</h3>
+                <ul>
+                    <li>Técnico Desenho de comunicação - Etec Carlos de Campos</li>
+                    <li>Técnico informática para Internet (FULL STACK) - Senac Cursando</li>
+                    <li>Designer Gráfico - FMU </li>
+                    <li>Tecnólogo em Redes de Computadores - Fac. Sumaré</li>
+                    <li>Linguagens e Educ. Artística - Fac. Sesi Leopoldina</li>
+                </ul>
+                <h3>Cursos de aperfeiçoamento profissional:</h3>
+                <ul>
+                    <!-- <li>Técnico informática para Internet (FULL STACK) - SENAC Cursando</li> -->
+                    <li>Design para Web Produção e Criação - 36h - Senac</li>
+                    <li>Introdução à Prática da Programação - 20h - Senac </li>
+                    <li>Automação Residencial com Assistente Virtual 40h - Senac</li>
+                    <!-- <li>HTMLS e CSS3</li> -->
+                    <!-- <li>Técnico em Eletroeletrônica</li> -->
+                </ul>
+                <!-- <h3>Cursos extracurriculares:</h3> -->
+                <ul>
+                    <!-- <li>Introdução ao PHP orientado a objeto - Udemy (Carga Horária: 5 horas)</li> -->
+                    <!-- <li>Introdução ao Javascript - Fundação Bradesco (Carga Horária: 20 horas)</li> -->
+                    <!-- <li>HTML (básico) - Fundação Bradesco (Carga Horária: 11 horas)</li> -->
+                    <!-- <li>Desenvolvimento web - Udemy (Carga Horária: 49 horas)</li> -->
+                    <!-- <li>PHP para iniciantes (CRUD PHP, PDO e MYSQLi) - Udemy (Carga Horária: 5 horas)</li> -->
+                    <!-- <li>Linguagem de programação JAVA (básico) - Fundação Bradesco (Carga Horária: 5 horas)</li> -->
+                    <!-- <li>Fundamentos de Lógica de Programação - Fundação Bradesco (Carga Horária: 15 horas)</li> -->
+                    <!-- <li>Introdução à Programação Orientada a Objetos (POO) - Fundação Bradesco (Carga Horária: 5 horas)</li> -->
+                </ul>
+            </div>
+        </section>
+
+        <!-- Barra lateral -->
+        <aside class="sidebar">
+            <div class="card contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> Mooca - São Paulo - SP, Brazil</p>
+                <p><i class="fas fa-envelope"></i> veruzkadesigner@gmail.com</p>
+                <p><i class="fas fa-phone-alt"></i> (11) 94845-7700</p>
+            </div>
+
+            <div class="card skills">
+                <h2>Habilidades</h2>
+                <div class="skill-item">
+                    <p>Windows11</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <p>Microsoft Office</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <p>Corel Draw X2024</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <p>Adobe Illustrator CS</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 35%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <p> Adobe Photoshop CS</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 40%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <p> OpenOffice</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 45%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <p>Inkscape</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 25%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <p>Java script</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 30%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <p>Html</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 30%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <p>Canva</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 90%;"></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+</body>
+
+</html>
